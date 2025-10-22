@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url('../Yaz.jpg') no-repeat center center fixed;
+  background: url('Yaz.jpg');
   background-size: cover;
   color: white;
   min-height: 100vh;
