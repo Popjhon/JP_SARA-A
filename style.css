@@ -90,6 +90,7 @@ nav.show a {
 
 .menu-toggle {
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1700px) {
@@ -101,38 +102,26 @@ nav.show a {
     margin: 0;
     text-align: center;
   }
-
   nav {
     grid-column: 1 / 11;
     grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
     gap: 3vh;
     margin-top: 1.5vh;
   }
-
-  nav ul {
-    grid-row: 2 / 3;
-  }
-
   nav a {
     font-size: 3vh;
   }
-
   .profile {
     grid-column: 8 / 10;
     grid-row: 3 / 4;
-    padding: 0;
     justify-self: center;
     width: 100%;
   }
-
   .text {
     grid-column: 1 / 8;
     grid-row: 3 / 4;
     text-align: justify;
   }
-
   .text p {
     font-size: 3vw;
     margin: 0 auto;
@@ -141,93 +130,35 @@ nav.show a {
 
 @media (max-width: 1300px) {
   h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
     font-size: 5.5vh;
-    padding: 5vh 0 0 0;
-    margin: 0;
-    text-align: center;
   }
-
-  nav {
-    grid-column: 1 / 11;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    gap: 3vh;
-    margin-top: 1.5vh;
-  }
-
-  nav ul {
-    grid-row: 2 / 3;
-  }
-
   nav a {
     font-size: 2.5vh;
   }
-
-  .profile {
-    grid-column: 8 / 10;
-    grid-row: 3 / 4;
-    padding: 0;
-    justify-self: center;
-    width: 100%;
-  }
-
-  .text {
-    grid-column: 1 / 8;
-    grid-row: 3 / 4;
-    text-align: justify;
-  }
-
   .text p {
     font-size: 3vw;
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 1000px) {
   h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
     font-size: 5vh;
-    padding: 5vh 0 0 0;
-    margin: 0;
-    text-align: center;
   }
-
-  nav {
-    grid-column: 1 / 11;
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: center;
-    gap: 3vh;
-    margin-top: 1.5vh;
-  }
-
-  nav ul {
-    grid-row: 2 / 3;
-  }
-
   nav a {
     font-size: 2vh;
   }
-
   .profile {
     grid-column: 4 / 8;
     grid-row: 3 / 4;
-    padding: 0;
-    justify-self: center;
     width: 80%;
+    justify-self: center;
   }
-
   .text {
     grid-column: 2 / 10;
     grid-row: 4 / 5;
-    text-align: justify;
     padding-top: 3.5vh;
+    text-align: justify;
   }
-
   .text p {
     font-size: 3.9vw;
     margin: 0 auto;
@@ -236,131 +167,81 @@ nav.show a {
 
 @media (max-width: 700px) {
   h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
     font-size: 4vh;
     padding: 0;
-    margin: 0;
   }
-
   .menu-toggle {
-    grid-row: 2 / 3;
     display: block;
     font-size: 2.5vh;
     color: black;
     position: relative;
     top: 3.8vh;
     left: 2vh;
+    z-index: 1000;
   }
-
   nav a {
     display: none;
   }
-
+  nav.show a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
   .profile {
     grid-column: 4 / 8;
     grid-row: 1 / 1;
-    padding: 0;
     justify-self: center;
   }
-
   .text {
     grid-column: 2 / 10;
     grid-row: 2 / 3;
-    text-align: justify;
     padding-top: 3.5vh;
   }
-
   .text p {
     font-size: 3.9vw;
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 400px) {
   h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
     font-size: 3.5vh;
-    padding: 0;
-    margin: 0;
   }
-
   .menu-toggle {
-    grid-row: 2 / 3;
-    display: block;
     font-size: 2.5vh;
-    color: black;
-    position: relative;
     top: 3.4vh;
-    left: 2vh;
   }
-
   .profile {
     grid-column: 4 / 8;
     grid-row: 1 / 1;
-    padding: 0;
-    justify-self: center;
   }
-
   .text {
     grid-column: 2 / 10;
     grid-row: 2 / 3;
-    text-align: justify;
     padding-top: 3vh;
   }
-
   .text p {
     font-size: 3.5vw;
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 300px) {
   h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
     font-size: 3vh;
-    padding: 0;
-    margin: 0;
   }
-
   .menu-toggle {
-    grid-row: 2 / 3;
-    display: block;
     font-size: 2vh;
-    color: black;
-    position: relative;
     top: 3vh;
-    left: 2vh;
   }
-
   .profile {
     grid-column: 4 / 8;
     grid-row: 1 / 1;
-    padding: 0;
-    justify-self: center;
   }
-
   .text {
     grid-column: 2 / 10;
     grid-row: 2 / 3;
-    text-align: justify;
     padding-top: 2.5vh;
   }
-
   .text p {
     font-size: 3.2vw;
-    margin: 0 auto;
-  }
-}
-.menu-toggle {
-  cursor: pointer;
-  z-index: 1000;
-}
-
-@media (max-width: 700px) {
-  #navMenu.show a {
-    display: block;
   }
 }
