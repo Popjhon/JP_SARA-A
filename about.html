@@ -54,6 +54,16 @@
       const nav = document.getElementById("navMenu");
       nav.classList.toggle("show");
     }
+
+    const navLinks = document.querySelectorAll("#navMenu a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("navMenu");
+        if (nav.classList.contains("show")) {
+          nav.classList.remove("show");
+        }
+      });
+    });
   </script>
 
 </body>

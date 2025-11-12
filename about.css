@@ -53,10 +53,26 @@ nav a:hover {
   background-color: rgba(60, 137, 153, 1);
 }
 
+nav.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(60, 137, 153, 0.9);
+  position: absolute;
+  top: 8vh;
+  left: 2vh;
+  padding: 1vh 2vh;
+  border-radius: 1vh;
+  gap: 1vh;
+}
+
 nav.show a {
   display: block;
-  margin: 10px 0;
-  text-align: center;
+  margin: 0.5vh 0;
+  text-align: left;
+  font-size: 2.2vh;
+  padding: 1vh 2vh;
+  width: auto;
 }
 
 .content {
@@ -196,13 +212,28 @@ nav.show a {
     left: 2vh;
     z-index: 1000;
   }
-  nav a {
+  nav {
     display: none;
+  }
+  nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(60, 137, 153, 0.9);
+    position: absolute;
+    top: 8vh;
+    left: 2vh;
+    padding: 1vh 2vh;
+    border-radius: 1vh;
+    gap: 1vh;
   }
   nav.show a {
     display: block;
-    margin: 10px 0;
-    text-align: center;
+    margin: 0.5vh 0;
+    text-align: left;
+    font-size: 2.2vh;
+    padding: 1vh 2vh;
+    width: auto;
   }
   .profile {
     grid-column: 4 / 8;
@@ -233,6 +264,13 @@ nav.show a {
   .menu-toggle {
     top: 3.4vh;
   }
+  nav.show {
+    top: 7vh;
+  }
+  nav.show a {
+    font-size: 2vh;
+    padding: 0.8vh 1.5vh;
+  }
   .profile {
     grid-column: 3 / 9;
     width: 85%;
@@ -255,6 +293,13 @@ nav.show a {
   }
   .menu-toggle {
     top: 3vh;
+  }
+  nav.show {
+    top: 6vh;
+  }
+  nav.show a {
+    font-size: 1.8vh;
+    padding: 0.7vh 1.2vh;
   }
   .profile {
     grid-column: 3 / 9;

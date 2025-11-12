@@ -27,7 +27,7 @@ h1 {
   font-size: 7vh;
   color: black;
   font-family: "Italiana", serif;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 nav {
@@ -51,12 +51,6 @@ nav a {
 
 nav a:hover {
   background-color: rgba(60, 137, 153, 1);
-}
-
-nav.show a {
-  display: block;
-  margin: 10px 0;
-  text-align: center;
 }
 
 .content {
@@ -159,12 +153,30 @@ nav.show a {
     color: black;
     margin: 20px;
   }
-  nav a {
+  nav {
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 5vh;
+    left: 2vh;
+    background-color: rgba(60, 137, 153, 0.9);
+    padding: 1vh 2vh;
+    border-radius: 1vh;
+    gap: 1vh;
+    width: auto;
+    z-index: 1000;
+  }
+  nav.show {
+    display: block;
   }
   nav.show a {
     display: block;
-    margin: 10px 0;
+    margin: 0.5vh 0;
+    text-align: left;
+    font-size: 2.2vh;
+    padding: 1vh 2vh;
+    width: auto;
   }
   .profile {
     grid-column: 4 / 8;
@@ -185,9 +197,15 @@ nav.show a {
     font-size: 3.2vh;
   }
   .menu-toggle {
-    display: block;
     font-size: 3vh;
     margin: 15px;
+  }
+  nav.show {
+    top: 6vh;
+  }
+  nav.show a {
+    font-size: 2vh;
+    padding: 0.8vh 1.5vh;
   }
   .profile {
     grid-column: 3 / 9;
@@ -203,9 +221,33 @@ nav.show a {
     font-size: 3vh;
   }
   .menu-toggle {
-    display: block;
     font-size: 2.5vh;
     margin: 10px;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 5.5vh;
+    left: 2vh;
+    background-color: rgba(60, 137, 153, 0.9);
+    padding: 1vh 2vh;
+    border-radius: 1vh;
+    gap: 1vh;
+    width: auto;
+    z-index: 1000;
+  }
+  nav.show {
+    display: block;
+  }
+  nav.show a {
+    display: block;
+    margin: 0.5vh 0;
+    text-align: left;
+    font-size: 1.8vh;
+    padding: 0.7vh 1.2vh;
+    width: auto;
   }
   .profile {
     grid-column: 3 / 9;
