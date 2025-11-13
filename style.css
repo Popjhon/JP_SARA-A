@@ -53,6 +53,10 @@ nav a:hover {
   background-color: rgba(60, 137, 153, 1);
 }
 
+nav.show {
+  display: block;
+}
+
 nav.show a {
   display: block;
   margin-top: 10px;
@@ -95,6 +99,7 @@ nav.show a {
 @media (max-width: 1700px) {
   h1 {
     grid-column: 1 / 11;
+    grid-row: 1 / 2;
     font-size: 6vh;
     padding: 5vh 0 0 0;
     margin: 0;
@@ -103,10 +108,15 @@ nav.show a {
 
   nav {
     grid-column: 1 / 11;
+    grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     gap: 3vh;
     margin-top: 1.5vh;
+  }
+
+  nav ul {
+    grid-row: 2 / 3;
   }
 
   nav a {
@@ -115,6 +125,7 @@ nav.show a {
 
   .profile {
     grid-column: 8 / 10;
+    grid-row: 3 / 4;
     padding: 0;
     justify-self: center;
     width: 100%;
@@ -122,6 +133,7 @@ nav.show a {
 
   .text {
     grid-column: 1 / 8;
+    grid-row: 3 / 4;
     text-align: justify;
   }
 
@@ -134,6 +146,7 @@ nav.show a {
 @media (max-width: 1300px) {
   h1 {
     grid-column: 1 / 11;
+    grid-row: 1 / 2;
     font-size: 5.5vh;
     padding: 5vh 0 0 0;
     margin: 0;
@@ -142,10 +155,15 @@ nav.show a {
 
   nav {
     grid-column: 1 / 11;
+    grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     gap: 3vh;
     margin-top: 1.5vh;
+  }
+
+  nav ul {
+    grid-row: 2 / 3;
   }
 
   nav a {
@@ -154,6 +172,7 @@ nav.show a {
 
   .profile {
     grid-column: 8 / 10;
+    grid-row: 3 / 4;
     padding: 0;
     justify-self: center;
     width: 100%;
@@ -161,6 +180,7 @@ nav.show a {
 
   .text {
     grid-column: 1 / 8;
+    grid-row: 3 / 4;
     text-align: justify;
   }
 
@@ -173,6 +193,7 @@ nav.show a {
 @media (max-width: 1000px) {
   h1 {
     grid-column: 1 / 11;
+    grid-row: 1 / 2;
     font-size: 5vh;
     padding: 5vh 0 0 0;
     margin: 0;
@@ -181,10 +202,15 @@ nav.show a {
 
   nav {
     grid-column: 1 / 11;
+    grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     gap: 3vh;
     margin-top: 1.5vh;
+  }
+
+  nav ul {
+    grid-row: 2 / 3;
   }
 
   nav a {
@@ -193,6 +219,7 @@ nav.show a {
 
   .profile {
     grid-column: 4 / 8;
+    grid-row: 3 / 4;
     padding: 0;
     justify-self: center;
     width: 80%;
@@ -200,6 +227,7 @@ nav.show a {
 
   .text {
     grid-column: 2 / 10;
+    grid-row: 4 / 5;
     text-align: justify;
     padding-top: 3.5vh;
   }
@@ -213,6 +241,7 @@ nav.show a {
 @media (max-width: 700px) {
   h1 {
     grid-column: 1 / 11;
+    grid-row: 1 / 2;
     font-size: 4vh;
     padding: 0;
     margin: 0;
@@ -229,14 +258,24 @@ nav.show a {
     cursor: pointer;
   }
 
-  nav a {
+  nav {
     display: none;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+    margin-top: 20px;
   }
 
-  nav.show a {
-    display: block;
-    margin-top: 10px;
+  nav a {
+    font-size: 3vh;
+    padding: 2vh;
+    background-color: rgba(60, 137, 153, 0.8);
+    border-radius: 5vh;
     text-align: center;
+  }
+
+  nav.show {
+    display: flex;
   }
 
   .profile {
@@ -293,45 +332,6 @@ nav.show a {
 
   .text p {
     font-size: 3.5vw;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 300px) {
-  h1 {
-    grid-column: 1 / 11;
-    grid-row: 1 / 2;
-    font-size: 3vh;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu-toggle {
-    grid-row: 2 / 3;
-    display: block;
-    font-size: 2vh;
-    color: black;
-    position: relative;
-    top: 3vh;
-    left: 2vh;
-  }
-
-  .profile {
-    grid-column: 4 / 8;
-    grid-row: 1 / 1;
-    padding: 0;
-    justify-self: center;
-  }
-
-  .text {
-    grid-column: 2 / 10;
-    grid-row: 2 / 3;
-    text-align: justify;
-    padding-top: 2.5vh;
-  }
-
-  .text p {
-    font-size: 3.2vw;
     margin: 0 auto;
   }
 }
