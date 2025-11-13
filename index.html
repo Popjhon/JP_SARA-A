@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,45 +11,47 @@
 </head>
 <body>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="menu-toggle">☰</div>
 
-<div class="container">
-  <h1>MY PORTFOLIO</h1>
+  <div class="container">
+    <h1>MY PORTFOLIO</h1>
 
-  <nav id="navMenu">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact Us</a>
-  </nav>
+    <nav id="navMenu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+    </nav>
 
-  <div class="content">
-    <div class="text">
-      <p>Hello, my name is Jhon Paul T. Saraña wanna</p>
-      <p>learn with purpose, innovate with vision, turn</p>
-      <p>ideas into reality, and shape tomorrow’s tech</p>
-      <p>today.</p>
+    <div class="content">
+      <div class="text">
+        <p>Hello, my name is Jhon Paul T. Saraña wanna</p>
+        <p>learn with purpose, innovate with vision, turn</p>
+        <p>ideas into reality, and shape tomorrow’s tech</p>
+        <p>today.</p>
+      </div>
+
+      <img src="Popop.jpg" alt="Profile Picture" class="profile">
     </div>
-
-    <img src="Popop.jpg" alt="Profile Picture" class="profile">
   </div>
-</div>
 
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("navMenu");
-    nav.classList.toggle("show");
-  }
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('navMenu');
 
-  const navLinks = document.querySelectorAll("#navMenu a");
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const nav = document.getElementById("navMenu");
-      if (nav.classList.contains("show")) {
-        nav.classList.remove("show");
-      }
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
     });
-  });
-</script>
+
+    // Optional: Close menu when a link is clicked on mobile
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if(nav.classList.contains('show')) {
+          nav.classList.remove('show');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
