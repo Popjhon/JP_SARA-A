@@ -32,6 +32,8 @@ nav {
   justify-content: center;
   gap: 4vh;
   margin-top: 20px;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
 }
 
 nav a {
@@ -229,10 +231,26 @@ nav a:hover {
     position: relative;
     top: 3.8vh;
     left: 2vh;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+  }
+
+  nav.show {
+    max-height: 500px;
   }
 
   nav a {
-    display: none;
+    display: block;
+    width: 80%;
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 4vh;
   }
 
   .profile {
@@ -253,12 +271,6 @@ nav a:hover {
     font-size: 3.9vw;
     margin: 0 auto;
   }
-
-  nav.show a {
-    display: block;
-    margin: 1vh 0;
-    text-align: center;
-  }
 }
 
 @media (max-width: 400px) {
@@ -278,10 +290,26 @@ nav a:hover {
     position: relative;
     top: 3.4vh;
     left: 2vh;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+  }
+
+  nav.show {
+    max-height: 500px;
   }
 
   nav a {
-    display: none;
+    display: block;
+    width: 80%;
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 4vh;
   }
 
   .profile {
@@ -301,11 +329,5 @@ nav a:hover {
   .text p {
     font-size: 3.5vw;
     margin: 0 auto;
-  }
-
-  nav.show a {
-    display: block;
-    margin: 1vh 0;
-    text-align: center;
   }
 }
