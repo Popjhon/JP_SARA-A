@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
   <title>Contact Us</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,59 +11,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <div class="container">
-    <h1>CONTACT US</h1>
+  <header class="header-grid">
+    <div class="container">
+      <div class="menu-bar">
+        <h1>MY PORTFOLIO</h1>
 
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" id="active-btn">Contact Us</a>
-    </nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
 
-    <div class="content">
-      <div class="text">
-        <p>If you want to reach out, feel free to message me anytime!</p>
-
-        <p><i class="fa-solid fa-envelope"></i> Email: 
-          <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">jhonpaulsarana21@gmail.com</a>
-        </p>
-
-        <p><i class="fa-brands fa-facebook"></i> Facebook: 
-          <a href="https://www.facebook.com/beyondgodlike21" target="_blank">Jhon Paul T. Saraña</a>
-        </p>
-
-        <p><i class="fa-brands fa-github"></i> GitHub: 
-          <a href="https://github.com/Popjhon" target="_blank">PopJhon</a>
-        </p>
-
-        <p><i class="fa-brands fa-instagram"></i> Instagram: 
-          <a href="https://www.instagram.com/poh_pop/" target="_blank">Poh_pop</a>
-        </p>
-
-        <p><i class="fa-solid fa-phone"></i> Contact #: <span>+63 935 807 5762</span></p>
+        <nav id="nav-menu">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html" id="active-btn">CONTACT</a>
+        </nav>
       </div>
-
-      <img src="Popop.jpg" alt="Profile" class="profile" />
     </div>
-  </div>
+  </header>
+
+  <main class="main-grid">
+    <div class="profile-image">
+      <img src="Popop.jpg" alt="Profile Photo">
+    </div>
+
+    <div class="text-box">
+      <h2>Contact Me</h2>
+      <p>If you want to reach out, feel free to message me anytime!</p>
+
+      <p><i class="fa-solid fa-envelope"></i> 
+        Email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">jhonpaulsarana21@gmail.com</a></p>
+
+      <p><i class="fa-brands fa-facebook"></i> 
+        Facebook: <a href="https://www.facebook.com/beyondgodlike21" target="_blank">Jhon Paul T. Saraña</a></p>
+
+      <p><i class="fa-brands fa-github"></i> 
+        GitHub: <a href="https://github.com/Popjhon" target="_blank">PopJhon</a></p>
+
+      <p><i class="fa-brands fa-instagram"></i> 
+        Instagram: <a href="https://www.instagram.com/poh_pop/" target="_blank">Poh_pop</a></p>
+
+      <p><i class="fa-solid fa-phone"></i> 
+        Contact #: +63 935 807 5762</p>
+    </div>
+  </main>
 
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navMenu");
-      nav.classList.toggle("show");
-    }
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-    const navLinks = document.querySelectorAll("#navMenu a");
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        const nav = document.getElementById("navMenu");
-        if (nav.classList.contains("show")) {
-          nav.classList.remove("show");
-        }
-      });
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
   </script>
+
 </body>
 </html>
