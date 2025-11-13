@@ -53,13 +53,9 @@ nav a:hover {
   background-color: rgba(60, 137, 153, 1);
 }
 
-nav.show {
-  display: block;
-}
-
 nav.show a {
   display: block;
-  margin-top: 10px;
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -255,27 +251,10 @@ nav.show a {
     position: relative;
     top: 3.8vh;
     left: 2vh;
-    cursor: pointer;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    gap: 2vh;
-    width: 100%;
-    margin-top: 20px;
   }
 
   nav a {
-    font-size: 3vh;
-    padding: 2vh;
-    background-color: rgba(60, 137, 153, 0.8);
-    border-radius: 5vh;
-    text-align: center;
-  }
-
-  nav.show {
-    display: flex;
+    display: none;
   }
 
   .profile {
@@ -301,6 +280,7 @@ nav.show a {
 @media (max-width: 400px) {
   h1 {
     grid-column: 1 / 11;
+    grid-row: 1 / 2;
     font-size: 3.5vh;
     padding: 0;
     margin: 0;
@@ -332,6 +312,45 @@ nav.show a {
 
   .text p {
     font-size: 3.5vw;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 300px) {
+  h1 {
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
+    font-size: 3vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    grid-row: 2 / 3;
+    display: block;
+    font-size: 2vh;
+    color: black;
+    position: relative;
+    top: 3vh;
+    left: 2vh;
+  }
+
+  .profile {
+    grid-column: 4 / 8;
+    grid-row: 1 / 1;
+    padding: 0;
+    justify-self: center;
+  }
+
+  .text {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+    text-align: justify;
+    padding-top: 2.5vh;
+  }
+
+  .text p {
+    font-size: 3.2vw;
     margin: 0 auto;
   }
 }
